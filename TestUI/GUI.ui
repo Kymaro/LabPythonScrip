@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>507</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RIGOL DG800/DG900 Remote Control</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QPushButton" name="buttonOutput1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>370</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Output</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelChannel1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>350</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Channel 1:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonOutput2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>370</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Output</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonConnect">
+    <property name="geometry">
+     <rect>
+      <x>374</x>
+      <y>290</y>
+      <width>61</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>conncect</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>350</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Channel 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;waveform&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;frequency&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;amplitude&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;offset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;phase&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textFrequencyChannel2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>430</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textFrequencyChannel1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>430</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textAmplitudeChannel1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>460</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textOffsetChannel1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>490</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textPhaseChannel1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>520</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="boxWaveform">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>400</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>SINusoid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SQUare</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="boxFreqMultiplicator">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>430</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Hz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>kHz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MHz</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="labelView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>480</width>
+      <height>272</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonLive">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Get Liveview</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonToggleHighZ_Ch1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>550</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Toggle HighZ/50ohm</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="boxFreqMultiplicator2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>430</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Hz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>kHz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MHz</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="textAmplitudeChannel2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>460</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textOffsetChannel2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>490</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textPhaseChannel2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>520</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonToggleHighZ_Ch2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>550</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Toggle HighZ/50ohm</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="boxWaveform2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>400</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>SINusoid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SQUare</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="boxUnitChannel1">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>460</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>VPP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VRMS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DBM</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="boxUnitChannel2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>460</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>VPP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VRMS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DBM</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="checkLive">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>320</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>auto Liveview?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Choose device:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="boxDevices">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>290</y>
+      <width>271</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonScreenshot">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>320</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save screenshot</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>507</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

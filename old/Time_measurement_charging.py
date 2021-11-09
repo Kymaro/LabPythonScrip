@@ -22,8 +22,8 @@ MEAS:VOLT:DC?
 open_resource(XXXXXX, write_termination='anti/n', query_delay=0.25)
 """
 PALAISEAU = 1
-POWER = -18
-FREQ = 2300
+POWER = 20
+FREQ = 2410
 voltageThreshold = 100 #mV
 timeArray = []
 voltageTimeArray = []
@@ -70,7 +70,7 @@ gen.write("OUTPUT OFF")
 #timeArray = [i for i in range(len(voltageTimeArray))]
 headerTimer = ['Time', 'Voltage']
 voltageTimerData = [[timeArray[i], voltageTimeArray[i]] for i in range(len(voltageTimeArray))]
-with open('timeCharging2.csv', 'w', encoding='UTF8', newline='') as f:
+with open('timeCharging.csv', 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(headerTimer)
     writer.writerows(voltageTimerData)
@@ -80,5 +80,5 @@ f.close()
 plt.plot(timeArray, voltageTimeArray)
 plt.title('Output Voltage (mV) depending time (s)\nwith an input power of {} dBm at {} MHz'.format(POWER, FREQ))
 plt.grid()
-plt.savefig('timeCharging2.svg')
+plt.savefig('timeCharging.svg')
 plt.close()

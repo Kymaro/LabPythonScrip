@@ -24,7 +24,7 @@ open_resource(XXXXXX, write_termination='anti/n', query_delay=0.25)
 PALAISEAU = 1
 START_FREQ = 1000   # MHz
 STOP_FREQ = 3000    # MHz
-STEP_FREQ = 50      # MHz
+STEP_FREQ = 10      # MHz
 
 START_POWER = -30   # dBm
 STOP_POWER = 10     # dBm
@@ -42,7 +42,7 @@ if PALAISEAU:
     gen = rm.open_resource('USB0::0x1AB1::0x099C::DSG8N213400002::INSTR')
 else:
     gen = rm.open_resource('USB0::0x1AB1::0x099C::DSG8N213400006::INSTR')
-mult = rm.open_resource('USB0::0xF4EC::0xEE38::SDM34FBX5R1321::INSTR', write_termination='\n', query_delay=0.25)
+mult = rm.open_resource('USB0::0xF4EC::0xEE38::SDM34FBX5R1321::INSTR', write_termination='\n', query_delay=0.10)
 
 gen.write("LEVEL -18dBm")  # 2 dB of loss with cable so this is -20 dBm. -20 is our key value for power
 gen.write("FREQ 1000MHz")
@@ -120,7 +120,6 @@ with open('voltageFreq.csv', 'r') as csvFile:
             yF.append(int(float(row[1]) * 1000))
 plt.plot(xF, yF)
 plt.title('Output Voltage (mV) depending on the input Frequency (MHz)\nwith Pin of -18 dBm')
-plt.legend()
 annot_max(xF, yF)
 plt.grid()
 plt.savefig('voltageFreq.svg')
@@ -139,7 +138,6 @@ with open('voltagePower.csv', 'r') as csvFile:
             yP.append(int(float(row[1]) * 1000))
 plt.plot(xP, yP)
 plt.title('Output Voltage (mV) depending on the input Power (dBm)\nat a Frequency of {} MHz'.format(xFmax))
-plt.legend()
 #annot_max(xP, yP)
 plt.grid()
 plt.savefig('voltagePower.svg')
