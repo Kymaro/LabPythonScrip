@@ -94,6 +94,7 @@ class RectifyCaract(QObject):
 
         gen.write("OUTPUT OFF")
         voltageFreqData = [[freqArray[i], voltageFreqArray[i]] for i in range(len(freqArray))]
+        print(voltageFreqData)
         self.finished.emit()
 
 
@@ -224,9 +225,10 @@ class QtLab(QMainWindow):
             writer = csv.writer(f)
             if HEADER:
                 writer.writerow(headerTimer)
+                writer.writerows(voltageTimerData)
             else:
                 writer.writerow(headerCaract)
-            writer.writerows(voltageTimerData)
+                writer.writerows(voltageFreqData)
         f.close()
 
     def energyUpdate(self, nrj):
